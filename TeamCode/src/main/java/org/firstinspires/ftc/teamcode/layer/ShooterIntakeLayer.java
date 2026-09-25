@@ -62,13 +62,13 @@ public final class ShooterIntakeLayer implements Layer {
         if (task instanceof AutoShooterTask) {
             AutoShooterTask castedTask = (AutoShooterTask) task;
             if (castedTask.getShoot()) {
-                flywheel.setPower(1.0);
+                flywheel.setPower(0.2);
             } else if (castedTask.getIntake()) {
                 bandy.setPower(1.0);
             } else if (castedTask.getEject()) {
                 bandy.setPower(-1.0);
             } else if (castedTask.getShooterEject()) {
-                flywheel.setPower(-1.0);
+                flywheel.setPower(-0.2);
             } else {
                 flywheel.setPower(0);
                 bandy.setPower(0);
